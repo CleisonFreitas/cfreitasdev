@@ -1,4 +1,9 @@
 {
-    "menus.home": "Início",
-    "menus.service": "Serviços"
+    "menus.home": "início",
+    "menus.service": "serviços",
+    "menus.about": "sobre",
+    "menus.portfolio": "portfolio",
+    "menus.contact": "contato",
+
+    "buttons.hire": "parceiria"
   }

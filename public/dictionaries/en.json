@@ -1,4 +1,9 @@
 {
-    "menus.home": "Home",
-    "menus.service": "Service"
+    "menus.home": "home",
+    "menus.service": "service",
+    "menus.about" : "about me",
+    "menus.portfolio": "portfolio",
+    "menus.contact": "contact me",
+
+    "buttons.hire": "hire me"
   }
