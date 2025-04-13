@@ -1,15 +1,16 @@
 'use client';
 import { LangType } from "@/app/types/lang_type";
-import { SidebarProvider } from "@/components/ui/sidebar";
-import AppSideBar from "@/lib/app-sidebar";
+import { Button } from "@/components/ui/button";
+import { RiMenu2Line } from "react-icons/ri";
 
 
 const Menu = ({ t }: LangType) => {
     return (
-        <SidebarProvider>
-            <AppSideBar t={t} />
-        </SidebarProvider>
-
+        <div className="flex justify-between items-center p-4 h-[80] w-full">
+            <RiMenu2Line size={24} color="#FFF"/>
+            <h1 className="text-orange-400 text-[24px]">Logo</h1>
+            <Button className="capitalize bg-gradient-to-r from-orange-400 to-orange-500">{t["buttons.hire"]}</Button>
+        </div>
     );
 }
 
