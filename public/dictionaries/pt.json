@@ -5,5 +5,8 @@
     "menus.portfolio": "portfolio",
     "menus.contact": "contato",
 
-    "buttons.hire": "parceiria"
+    "buttons.hire": "parceiria",
+
+    "introduction.hi": "olá, eu me chamo",
+    "introduction.file": "baixar CV"
   }
