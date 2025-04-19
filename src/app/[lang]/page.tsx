@@ -1,7 +1,6 @@
 import Menu from "../components/menu";
 import { Dictionary, getDictionary } from "../../lib/dictionaries";
 import MiddleContent from "../components/middle-content";
-import { ScrollArea } from "@/components/ui/scroll-area";
 
 type Props = {
   params: Promise<{
@@ -19,11 +18,9 @@ export default async function Home(props: Props) {
   const t: Dictionary = await getDictionary(lang);
 
   return (
-    <div className="min-h-screen w-[screen] flex flex-col justify-start items-start bg-gray-900">
+    <div className="grid grid-cols-[100dvw] grid-rows-[80px_1fr] bg-gray-950 overflow-y-auto">
       <Menu t={t} />
-      <ScrollArea className="h-full w-full rounded-md border-none pt-2">
-        <MiddleContent t={t} />
-      </ScrollArea>
+      <MiddleContent t={t} />
     </div>
   );
 }
