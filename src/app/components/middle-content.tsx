@@ -4,6 +4,7 @@ import { LangType } from "../types/lang_type";
 import About from "./about";
 import Introduction from "./introduction";
 import Services from "./services";
+import SkillSection from "./skill-section";
 
 const MiddleContent = ({ t }: LangType) => {
     return (
@@ -11,10 +12,11 @@ const MiddleContent = ({ t }: LangType) => {
             <Introduction t={t} />
             <Services />
             <About />
+            <SkillSection />
             <div className="h-[250px]">
                 <p className="text-white font-bold">102030</p>
             </div>
-       </section>
+        </section>
     );
 }
 
