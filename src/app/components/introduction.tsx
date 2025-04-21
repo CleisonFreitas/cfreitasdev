@@ -46,7 +46,7 @@ const Introduction = ({ t }: LangType) => {
     ];
     return (
         <section className="flex flex-col justify-between items-center h-full md:flex-row">
-            <div className="flex flex-col  justify-between items-center gap-10">
+            <div className="flex flex-col justify-between items-center gap-10">
                 <div className="flex flex-col gap-1 justify-center items-center">
                     <h3 className="text-white opacity-50 first-letter:capitalize text-[24px]">{t['introduction.hi']}</h3>
                     <h2 className="text-white opacity-70 text-[30px]">Cleison Freitas</h2>
@@ -74,7 +74,6 @@ const Introduction = ({ t }: LangType) => {
                 </div>
                 <CustomSeparator items={items} />
             </div>
-            <span className="h-[100px] md:h-0"/>
             <CustomPortrait image="/assets/images/perfil.png" />
         </section>
     )
