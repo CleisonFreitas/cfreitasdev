@@ -2,6 +2,7 @@
 
 import { LangType } from "../types/lang_type";
 import About from "./about";
+import Contact from "./contact";
 import Introduction from "./introduction";
 import Portfolio from "./portfolio";
 import Services from "./services";
@@ -15,6 +16,7 @@ const MiddleContent = ({ t }: LangType) => {
             <About />
             <SkillSection />
             <Portfolio />
+            <Contact />
         </section>
     );
 }
