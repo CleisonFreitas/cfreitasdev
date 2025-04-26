@@ -3,18 +3,20 @@ import { Card, CardContent } from "@/components/ui/card";
 import { JSX } from "react";
 
 export type CustomCardType = {
+    id: string,
     title: string;
     description: string;
     icon: JSX.Element;
 }
 
 const CustomCard = ({
+    id,
     title,
     icon,
     description
 }: CustomCardType) => {
     return (
-        <Card className="w-full h-auto bg-gray-900 box-content">
+        <Card key={id} className="w-full h-auto bg-gray-900 box-content">
             <CardContent
                 className="flex justify-between items-center text-center flex-col gap-2">
                 <div className="flex flex-col items-center justify-center gap-4">
