@@ -4,7 +4,7 @@ import { CustomSeparatorsType } from "../types/custom-separator-type";
 
 const CustomSeparator = ({ items }: CustomSeparatorsType) => {
     return (
-        <div className="rounded-lg bg-gray-700 flex gap-2 h-[80px] px-1 py-2 box-content mx-1">
+        <div className="rounded-lg bg-neutral-800 flex gap-2 h-[80px] px-1 py-2 box-content mx-1">
             {
                 items.map((item, key) => {
                     const isLast = key === items.length - 1;

@@ -1,6 +1,7 @@
 import Menu from "../components/menu";
 import { Dictionary, getDictionary } from "../../lib/dictionaries";
 import MiddleContent from "../components/middle-content";
+import FooterSection from "../components/footer-section";
 
 type Props = {
   params: Promise<{
@@ -21,6 +22,7 @@ export default async function Home(props: Props) {
     <div className="grid grid-cols-[100dvw] grid-rows-[80px_1fr] bg-gray-950 overflow-y-auto">
       <Menu t={t} />
       <MiddleContent t={t} />
+      <FooterSection />
     </div>
   );
 }
