@@ -16,7 +16,7 @@ const CustomCard = ({
     description
 }: CustomCardType) => {
     return (
-        <Card key={id} className="w-full h-auto bg-neutral-900 box-content">
+        <Card key={id} className="w-full h-auto bg-neutral-900 box-content border-none">
             <CardContent
                 className="flex justify-between items-center text-center flex-col gap-2">
                 <div className="flex flex-col items-center justify-center gap-4">
