@@ -88,10 +88,13 @@ const Contact = () => {
         console.log("🚀 Submitted:", values)
     }
     return (
-        <section className="flex justify-center w-full px-4 flex-col items-center gap-4">
+        <section className="flex justify-center w-full px-4 flex-col items-center gap-4 md:mt-[90px]">
             <CustomTitle title="contact me" subtitle={'Feel free to get in touch!'} />
             <Form {...form}>
-                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-1 flex flex-col w-full">
+                <form
+                    onSubmit={form.handleSubmit(onSubmit)}
+                    className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full"
+                >
                     {fields.map((item, index) => {
                         switch (item.type) {
                             case 'input':
@@ -101,13 +104,14 @@ const Contact = () => {
                                         control={form.control}
                                         name={item.name}
                                         render={({ field }) => (
-                                            <FormItem>
+                                            <FormItem className="w-full">
                                                 <FormLabel>{item.label}</FormLabel>
                                                 <FormControl>
                                                     <Input
                                                         {...field}
                                                         placeholder={item.placeholder as string}
                                                         value={field.value ?? ''}
+                                                        className="bg-neutral-900 lg:text-xl"
                                                     />
                                                 </FormControl>
                                                 <FormMessage />
@@ -123,11 +127,11 @@ const Contact = () => {
                                         control={form.control}
                                         name={item.name}
                                         render={({ field }) => (
-                                            <FormItem>
+                                            <FormItem className="col-span-1 lg:col-span-2">
                                                 <FormLabel>Project Details...</FormLabel>
                                                 <FormControl>
                                                     <Textarea
-                                                        className="h-[100px]"
+                                                        className="h-[200px] rounded-lg bg-neutral-900 border-none placeholder:text-xl"
                                                         {...field}
                                                         placeholder={item.placeholder as string}
                                                         value={field.value ?? ''}
@@ -137,7 +141,6 @@ const Contact = () => {
                                             </FormItem>
                                         )}
                                     />
-
                                 );
 
                             case 'select':
@@ -147,17 +150,19 @@ const Contact = () => {
                                         control={form.control}
                                         name="interest"
                                         render={({ field }) => (
-                                            <FormItem>
+                                            <FormItem className="w-full">
                                                 <FormLabel>Services</FormLabel>
                                                 <Select onValueChange={field.onChange} defaultValue={field.value || ""}>
                                                     <FormControl>
-                                                        <SelectTrigger className="w-full">
+                                                        <SelectTrigger className="w-full bg-neutral-900 border-none py-7">
                                                             <SelectValue placeholder="Service of interest" />
                                                         </SelectTrigger>
                                                     </FormControl>
                                                     <SelectContent>
                                                         {serviceItems.map((item) => (
-                                                            <SelectItem key={item.id} value={item.id}>{item.title}</SelectItem>
+                                                            <SelectItem key={item.id} value={item.id}>
+                                                                {item.title}
+                                                            </SelectItem>
                                                         ))}
                                                     </SelectContent>
                                                 </Select>
@@ -168,11 +173,15 @@ const Contact = () => {
                                 );
                         }
                     })}
-                    <Button
-                        className="mt-3 mb-4 bg-gray-950 text-white border-2 border-white py-5"
-                        type="submit"
-                    >Send
-                    </Button>
+
+                    <div className="col-span-1 lg:col-span-2 flex justify-center lg:justify-end">
+                        <Button
+                            className="mt-3 mb-4 bg-gray-950 text-white border-2 border-white py-5 w-full lg:w-[225px]"
+                            type="submit"
+                        >
+                            Send
+                        </Button>
+                    </div>
                 </form>
             </Form>
         </section>

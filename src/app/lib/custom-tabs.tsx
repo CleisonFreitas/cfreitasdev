@@ -11,13 +11,13 @@ import CustomPortfolioCard from "./custom-portfolio-card";
 const CustomTabs = () => {
     return (
         <Tabs defaultValue="all" className="w-full gap-16">
-            <TabsList className="grid w-full grid-cols-3 bg-gray-950 justify-between gap-2">
-                <TabsTrigger value="all" className="text-white border border-orange-400 bg-gray-900">All</TabsTrigger>
-                <TabsTrigger value="gallery" className="text-white border border-orange-400 bg-gray-900">Galeria</TabsTrigger>
-                <TabsTrigger value="web_app" className="text-white border border-orange-400 bg-gray-900">Web Apps</TabsTrigger>
-                <TabsTrigger value="mobile_app" className="text-white border border-orange-400 bg-gray-900">Mobile Apps</TabsTrigger>
+            <TabsList className="grid grid-cols-3 gap-2 bg-gray-950 md:w-full lg:w-auto [&>*]:text-white [&>*]:border [&>*]:border-orange-400 [&>*]:bg-neutral-900 [&>*]:cursor-pointer [&>*]:px-4 [&>*]:py-2">
+                <TabsTrigger value="all">All</TabsTrigger>
+                <TabsTrigger value="gallery">Galeria</TabsTrigger>
+                <TabsTrigger value="web_app">Web Apps</TabsTrigger>
+                <TabsTrigger value="mobile_app">Mobile Apps</TabsTrigger>
             </TabsList>
-            <TabsContent value="all" className="px-4">
+            <TabsContent value="all">
                 <CustomPortfolioCard />
             </TabsContent>
             <TabsContent value="gallery">

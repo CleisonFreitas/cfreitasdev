@@ -1,6 +1,7 @@
 'use client';
 
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
+import { useIsMobile } from "@/hooks/use-mobile";
 import Image from "next/image";
 import Link from "next/link";
 import { FaGithub } from "react-icons/fa";
@@ -12,8 +13,9 @@ export interface Artwork {
 }
 
 const CustomPortfolioCard = () => {
+    const isMobile = useIsMobile();
     return (
-        <ScrollArea className="w-full flex justify-center items-center whitespace-nowrap rounded-md bg-gradient-to-b from-orange-400 to-gray-950 border border-white">
+        <ScrollArea className="w-full flex justify-center items-center whitespace-nowrap rounded-md bg-gradient-to-b from-orange-500 via-neutral-900 to-neutral-900 border border-gray-700">
             <div className="flex items-center justify-center w-max space-x-4 p-4">
                 <figure className="shrink-0">
                     <div className="overflow-hidden rounded-md">
@@ -21,7 +23,7 @@ const CustomPortfolioCard = () => {
                             src="/assets/images/product_i.jpg"
                             alt={`Photo by me`}
                             className="aspect-[3/4] h-fit w-fit object-cover"
-                            width={200}
+                            width={isMobile ? 200 : 350}
                             height={400}
                         />
                     </div>
@@ -46,7 +48,7 @@ const CustomPortfolioCard = () => {
                             src="/assets/images/product_i.jpg"
                             alt={`Photo by me`}
                             className="aspect-[3/4] h-fit w-fit object-cover"
-                            width={200}
+                            width={isMobile ? 200 : 350}
                             height={400}
                         />
                     </div>

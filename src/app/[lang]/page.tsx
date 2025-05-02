@@ -19,7 +19,7 @@ export default async function Home(props: Props) {
   const t: Dictionary = await getDictionary(lang);
 
   return (
-    <div className="grid grid-cols-[100dvw] grid-rows-[80px_1fr] bg-gray-950 overflow-y-auto">
+    <div className="grid grid-cols-[calc(100dvw-10px)] md:grid-cols-[calc(100dvw-20px)] xl:grid-cols-[calc(100dvw-120px)] justify-center grid-rows-[80px_1fr] md:grid-rows-[180px_1fr] bg-gray-950 overflow-y-auto">
       <Menu t={t} />
       <MiddleContent t={t} />
       <FooterSection />

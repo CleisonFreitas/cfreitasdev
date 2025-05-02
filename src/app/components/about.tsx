@@ -7,17 +7,18 @@ import { FaCloudDownloadAlt } from "react-icons/fa";
 
 const About = () => {
     return (
-        <section className="mt-4 flex flex-col justify-between items-center gap-24">
+        <section className="mt-[90px] flex flex-col justify-between items-center w-full">
             <CustomTitle title="About Me" subtitle={'Little description about the service'} />
-            <div className="flex flex-col items-center justify-between gap-14">
+            <span className="h-[90px]" />
+            <div className="flex flex-col md:flex-row mt-0 md:mt-14 md:justify-between md:gap-8 w-full items-center md:items-start justify-between gap-14">
                 <CustomPortrait image="/assets/images/perfil.png" />
-                <span className="flex justify-center items-center w-full flex-col px-4 gap-4">
+                <span className="flex justify-center items-center w-full lg:w-[631px] flex-col md:items-start px-4 gap-4">
                     <p
-                        className="text-wrap text-gray-400 text-justify"
+                        className="text-wrap text-gray-500 text-justify lg:text-2xl"
                     >
                         {`Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`}
                     </p>
-                    <Button className="bg-orange-500 text-white flex items-center gap-4">
+                    <Button className="bg-orange-500 text-white flex items-center gap-4 md:mt-2 cursor-pointer hover:text-orange-300">
                         <FaCloudDownloadAlt />
                         <p>Download CV</p>
                     </Button>
