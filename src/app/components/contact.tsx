@@ -131,7 +131,7 @@ const Contact = () => {
                                                 <FormLabel>Project Details...</FormLabel>
                                                 <FormControl>
                                                     <Textarea
-                                                        className="h-[200px] bg-neutral-900 border-none placeholder:text-xl"
+                                                        className="h-[200px] rounded-lg bg-neutral-900 border-none placeholder:text-xl"
                                                         {...field}
                                                         placeholder={item.placeholder as string}
                                                         value={field.value ?? ''}

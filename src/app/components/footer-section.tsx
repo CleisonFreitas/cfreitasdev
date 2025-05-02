@@ -7,7 +7,7 @@ import Logo from "@/components/personal/logo";
 
 const FooterSection = () => {
     return (
-        <section className="bg-neutral-900 justify-center items-center flex flex-col gap-8 p-4">
+        <section className="mt-[90px] bg-neutral-900 justify-center items-center flex flex-col gap-8 p-4">
             <Logo />
             {renderMenuItems({ isVertical: false })}
             {renderSocialMediaItems()}
