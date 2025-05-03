@@ -88,7 +88,7 @@ const Contact = () => {
         console.log("🚀 Submitted:", values)
     }
     return (
-        <section className="flex justify-center w-full px-4 flex-col items-center gap-4 md:mt-[90px]">
+        <section className="flex justify-center w-full px-1 md:px-0 flex-col items-center gap-4 md:mt-[90px]">
             <CustomTitle title="contact me" subtitle={'Feel free to get in touch!'} />
             <Form {...form}>
                 <form
@@ -174,9 +174,9 @@ const Contact = () => {
                         }
                     })}
 
-                    <div className="col-span-1 lg:col-span-2 flex justify-center lg:justify-end">
+                    <div className="col-span-1 lg:col-span-2 flex justify-center md:justify-start lg:justify-end">
                         <Button
-                            className="mt-3 mb-4 bg-gray-950 text-white border-2 border-white py-5 w-full lg:w-[225px]"
+                            className="mt-3 mb-4 bg-gray-950 text-white border-2 border-white py-5 w-full md:w-[225px]"
                             type="submit"
                         >
                             Send
