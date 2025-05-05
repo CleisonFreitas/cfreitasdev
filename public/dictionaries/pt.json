@@ -1,12 +1,61 @@
 {
-    "menus.home": "início",
-    "menus.service": "serviços",
-    "menus.about": "sobre",
-    "menus.portfolio": "portfolio",
-    "menus.contact": "contato",
+  "menus.home": "início",
+  "menus.service": "serviços",
+  "menus.about": "sobre",
+  "menus.portfolio": "portfólio",
+  "menus.contact": "contato",
 
-    "buttons.hire": "parceiria",
+  "buttons.hire": "parceiria",
 
-    "introduction.hi": "olá, eu me chamo",
-    "introduction.file": "baixar CV"
-  }
+  "introduction.hi": "olá, eu me chamo",
+  "introduction.file": "baixar CV",
+  "introduction.experiences": "experiências",
+  "introduction.project": "projetos feitos",
+  "introduction.happy_clients": "clientes realizados",
+
+  "services.layer": "Serviços de desenvolvimento Fullstack focados em criar soluções digitais escaláveis e de alta performance.",
+  "services.custom_website": "Desenvolvimento de Sites Personalizados",
+  "services.custom_website.description": "Desenvolvimento completo de sites, combinando interfaces visuais modernas com sistemas backend robustos, adaptados às necessidades específicas de cada negócio.",
+  
+  "services.api_development": "Desenvolvimento e Integração de APIs",
+  "services.api_development.description": "Criação de APIs RESTful e GraphQL eficientes, além de integrações com serviços externos como plataformas de pagamento, CRMs e sistemas personalizados.",
+  
+  "services.e_commerce": "Soluções de E-commerce",
+  "services.e_commerce.description": "Implantação de lojas virtuais completas, com carrinhos de compra, integração de meios de pagamento (Stripe, PayPal, MercadoPago), gerenciamento de produtos e painéis de controle.",
+  
+  "services.saas": "Criação de Plataformas SaaS",
+  "services.saas.description": "Desenvolvimento de aplicações SaaS (Software como Serviço) com modelos de assinatura, áreas administrativas, painéis de usuários e infraestrutura escalável.",
+  
+  "services.landing_page": "Landing Pages e Funis de Marketing",
+  "services.landing_page.description": "Construção de landing pages otimizadas para conversão, integradas a estratégias de marketing digital, capturando leads de forma eficaz e conectando a bancos de dados ou CRMs.",
+  
+  "services.maintenance": "Manutenção e Otimização de Aplicações Web",
+  "services.maintenance.description": "Serviços contínuos de manutenção, otimização de performance e atualizações de segurança para garantir a qualidade e a evolução das aplicações digitais.",
+
+  "about.layer": "Me especializei em criar soluções web que funcionam, combinando um bom design, backend sólido e foco em performance.",
+  "about.description": "Sou Desenvolvedor Fullstack com paixão por criar soluções digitais inteligentes, escaláveis e impactantes. Com experiência sólida em tecnologias de frontend e backend, ajudo empresas, startups e empreendedores a transformarem suas ideias em produtos de alta qualidade. Focado em código limpo, experiência do usuário e performance, busco sempre entregar soluções que gerem valor real. A busca por aprendizado constante e inovação faz parte da minha rotina para acompanhar a evolução do mundo da tecnologia.",
+
+  "portfolio.option.all": "todos",
+  "portfolio.option.gallery": "galeria",
+  "portfolio.option.web": "aplicativos web",
+  "portfolio.option.mobile": "aplicativos mobile",
+
+  "contact.section": "Sintá-se livre para entrar em contato",
+
+  "contact.form.fullname": "nome completo",
+  "contact.form.fullname.placeholder": "Digite seu nome completo",
+
+  "contact.form.email": "email",
+  "contact.form.email.placeholder": "Digite seu e-mail de contato",
+
+  "contact.form.phone": "número telefônico",
+  "contact.form.phone.placeholder": "Digite seu número telefônico",
+
+  "contact.form.service": "serviços",
+  "contact.form.service.placeholder": "Serviço de interesse",
+
+  "contact.form.details": "detalhes",
+  "contact.form.details.placeholder": "Me informe mais detalhes",
+
+  "contact.form.button": "enviar"
+}

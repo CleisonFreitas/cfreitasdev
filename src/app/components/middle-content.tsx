@@ -12,11 +12,11 @@ const MiddleContent = ({ t }: LangType) => {
     return (
         <section className="row-start-2 row-end-2 col-start-1 col-end-1 flex flex-col gap-8 w-full">
                 <Introduction t={t} />
-                <Services />
-                <About />
+                <Services t={t} />
+                <About t={t} />
                 <SkillSection />
-                <Portfolio />
-                <Contact />
+                <Portfolio t={t} />
+                <Contact t={t} />
         </section>
     );
 }

@@ -2,14 +2,15 @@
 
 import CustomTabs from "../lib/custom-tabs";
 import CustomTitle from "../lib/custom-title";
+import { LangType } from "../types/lang_type";
 
-const Portfolio = () => {
+const Portfolio = ({ t } : LangType) => {
 
     return (
         <section className="mt-4 justify-center items-center flex flex-col md:mt-[90px]">
-            <CustomTitle title="portfolio"/>
+        <CustomTitle title={t['menus.portfolio']}/>
             <div className="flex justify-center flex-col gap-2 items-center w-full">
-                <CustomTabs />
+                <CustomTabs t={t} />
             </div>
         </section>
     );
