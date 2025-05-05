@@ -4,11 +4,12 @@ import { Button } from "@/components/ui/button";
 import CustomPortrait from "../lib/custom-portrait";
 import CustomTitle from "../lib/custom-title";
 import { FaCloudDownloadAlt } from "react-icons/fa";
+import { LangType } from "../types/lang_type";
 
-const About = () => {
+const About = ({ t }: LangType) => {
     return (
         <section className="mt-[90px] flex flex-col justify-between items-center w-full">
-            <CustomTitle title="About Me" subtitle={'Little description about the service'} />
+            <CustomTitle title={t['menus.about']} subtitle={t["about.layer"]} />
             <span className="h-[90px]" />
             <div className="flex flex-col md:flex-row mt-0 md:mt-14 md:justify-between md:gap-8 w-full items-center md:items-start justify-between gap-14">
                 <CustomPortrait image="/assets/images/perfil.png" />
@@ -16,11 +17,11 @@ const About = () => {
                     <p
                         className="text-wrap text-gray-500 text-justify lg:text-2xl"
                     >
-                        {`Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`}
+                        {t['about.description']}
                     </p>
-                    <Button className="bg-orange-500 text-white flex items-center gap-4 md:mt-2 cursor-pointer hover:text-orange-300">
+                    <Button className="bg-orange-500 text-white flex items-center gap-4 md:mt-2 cursor-pointer hover:text-orange-300 text-xl w-[300px] py-5">
                         <FaCloudDownloadAlt />
-                        <p>Download CV</p>
+                        <p className="capitalize">{t['introduction.file']}</p>
                     </Button>
                 </span>
             </div>

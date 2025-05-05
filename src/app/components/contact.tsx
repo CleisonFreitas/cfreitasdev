@@ -17,6 +17,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { serviceItems } from "../data/service_data";
 import { Button } from "@/components/ui/button";
+import { LangType } from "../types/lang_type";
 
 const formSchema = z.object({
     fullname: z.string().min(3, { message: "Full name must be at least 10 characters." }),
@@ -38,7 +39,7 @@ type FieldType = {
     type: "input" | "textarea" | "select"
 };
 
-const Contact = () => {
+const Contact = ({ t }: LangType) => {
     const form = useForm<FormData>({
         resolver: zodResolver(formSchema),
         defaultValues: {
@@ -54,32 +55,32 @@ const Contact = () => {
     const fields: FieldType[] = [
         {
             name: "fullname",
-            label: "Full name",
-            placeholder: "Type the full name",
+            label: `${t['contact.form.fullname']}`,
+            placeholder: `${t['contact.form.fullname.placeholder']}`,
             type: "input"
         },
         {
             name: "email",
-            label: "Email",
-            placeholder: "Type the email address",
+            label: `${t['contact.form.email']}`,
+            placeholder: `${t['contact.form.email.placeholder']}`,
             type: "input"
         },
         {
             name: "phone",
-            label: "Phone Number",
-            placeholder: "Type the phone number",
+            label: `${t['contact.form.phone']}`,
+            placeholder: `${t['contact.form.phone.placeholder']}`,
             type: "input"
         },
         {
             name: "services",
-            label: "Services",
-            placeholder: "Choose the service",
+            label: `${t['contact.form.service']}`,
+            placeholder: `${t['contact.form.service.placeholder']}`,
             type: "select"
         },
         {
             name: "details",
-            label: "Details",
-            placeholder: "Tell me the details.",
+            label: `${t['contact.form.details']}`,
+            placeholder: `${t['contact.form.details.placeholder']}`,
             type: "textarea"
         }
     ]
@@ -89,7 +90,7 @@ const Contact = () => {
     }
     return (
         <section className="flex justify-center w-full px-1 md:px-0 flex-col items-center gap-4 md:mt-[90px]">
-            <CustomTitle title="contact me" subtitle={'Feel free to get in touch!'} />
+            <CustomTitle title={t['menus.contact']} subtitle={t['contact.section']} />
             <Form {...form}>
                 <form
                     onSubmit={form.handleSubmit(onSubmit)}
@@ -155,13 +156,13 @@ const Contact = () => {
                                                 <Select onValueChange={field.onChange} defaultValue={field.value || ""}>
                                                     <FormControl>
                                                         <SelectTrigger className="w-full bg-neutral-900 border-none py-7">
-                                                            <SelectValue placeholder="Service of interest" />
+                                                            <SelectValue placeholder={t['contact.form.service.placeholder']} />
                                                         </SelectTrigger>
                                                     </FormControl>
                                                     <SelectContent>
                                                         {serviceItems.map((item) => (
                                                             <SelectItem key={item.id} value={item.id}>
-                                                                {item.title}
+                                                                {t[item.title]}
                                                             </SelectItem>
                                                         ))}
                                                     </SelectContent>
@@ -176,10 +177,10 @@ const Contact = () => {
 
                     <div className="col-span-1 lg:col-span-2 flex justify-center md:justify-start lg:justify-end">
                         <Button
-                            className="mt-3 mb-4 bg-gray-950 text-white border-2 border-white py-5 w-full md:w-[225px]"
+                            className="capitalize mt-3 mb-4 bg-gray-950 text-white border-2 border-white py-5 w-full md:w-[225px]"
                             type="submit"
                         >
-                            Send
+                            {t['contact.form.button']}
                         </Button>
                     </div>
                 </form>

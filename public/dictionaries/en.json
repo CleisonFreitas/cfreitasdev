@@ -1,12 +1,60 @@
 {
-    "menus.home": "home",
-    "menus.service": "service",
-    "menus.about" : "about me",
-    "menus.portfolio": "portfolio",
-    "menus.contact": "contact me",
+  "menus.home": "home",
+  "menus.service": "service",
+  "menus.about": "about me",
+  "menus.portfolio": "portfolio",
+  "menus.contact": "contact me",
 
-    "buttons.hire": "hire me",
+  "buttons.hire": "hire me",
+  "introduction.hi": "hi, I am",
+  "introduction.file": "download CV",
+  "introduction.experiences": "experiences",
+  "introduction.project": "project done",
+  "introduction.happy_clients": "happy clients",
 
-    "introduction.hi": "hi, I am",
-    "introduction.file": "download CV"
-  }
+  "services.layer": "Fullstack development services focused on building scalable, high-performance digital solutions.",
+  "services.custom_website": "Custom Website Development",
+  "services.custom_website.description": "Complete development of websites, combining modern visual interfaces with robust backend systems, tailored to the specific needs of each business.",
+  
+  "services.api_development": "API Development and Integration",
+  "services.api_development.description": "Creation of efficient RESTful and GraphQL APIs, as well as integration with external services such as payment platforms, CRMs, and custom systems.",
+  
+  "services.e_commerce": "E-commerce Solutions",
+  "services.e_commerce.description": "Deployment of full-featured online stores, including shopping carts, payment gateway integration (Stripe, PayPal, MercadoPago), product management, and admin dashboards.",
+  
+  "services.saas": "SaaS Platform Creation",
+  "services.saas.description": "Development of SaaS (Software as a Service) applications featuring subscription models, user dashboards, administrative areas, and scalable infrastructure.",
+  
+  "services.landing_page": "Landing Pages and Marketing Funnels",
+  "services.landing_page.description": "Design and development of high-conversion landing pages aligned with digital marketing strategies, lead capture systems, and CRM or database integrations.",
+  
+  "services.maintenance": "Web Application Maintenance and Optimization",
+  "services.maintenance.description": "Ongoing maintenance services, performance optimization, and security updates to ensure the quality, security, and continuous improvement of digital applications.",
+  
+  "about.layer": "I specialized in creating web solutions that work - combining great design, solid backend, and a focus on performance",
+  "about.description": "I'm a Fullstack Developer with a passion for building smart, scalable, and impactful digital solutions. With solid experience in both frontend and backend technologies, I help businesses, startups, and entrepreneurs turn their ideas into high-quality products. Focused on clean code, user experience, and performance, I always seek to deliver solutions that truly generate value. Constant learning and innovation are part of my daily journey to stay ahead in the ever-evolving tech world.",
+
+  "portfolio.option.all": "all",
+  "portfolio.option.gallery": "gallery",
+  "portfolio.option.web": "web apps",
+  "portfolio.option.mobile": "mobile apps",
+
+  "contact.section": "Feel free to get in touch",
+
+  "contact.form.fullname": "full name",
+  "contact.form.fullname.placeholder": "Type the full name",
+
+  "contact.form.email": "email",
+  "contact.form.email.placeholder": "Type the email address",
+
+  "contact.form.phone": "phone number",
+  "contact.form.phone.placeholder": "Type the phone number",
+
+  "contact.form.service": "serviços",
+  "contact.form.service.placeholder": "Service of interest",
+
+  "contact.form.details": "details",
+  "contact.form.details.placeholder": "Tell me the details.",
+
+  "contact.form.button": "send"
+}

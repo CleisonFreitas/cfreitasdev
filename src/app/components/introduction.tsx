@@ -13,15 +13,15 @@ const Introduction = ({ t }: LangType) => {
     const items: CustomSeparatorType[] = [
         {
             amount: 5,
-            description: 'experiences'
+            description: `${t['introduction.experiences']}`
         },
         {
-            amount: 20,
-            description: 'project done'
+            amount: 10,
+            description: `${t['introduction.project']}`
         },
         {
-            amount: 80,
-            description: 'experiences'
+            amount: 40,
+            description: `${t['introduction.happy_clients']}`
         }
     ];
     return (
