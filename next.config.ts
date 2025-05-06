@@ -6,7 +6,7 @@ const nextConfig: NextConfig = {
       {
         source: '/',
         destination: '/en',
-        permanent: true, // or true if you want a permanent redirect (308 status)
+        permanent: true, // for permanent redirect (308 status)
       },
     ];
   },
