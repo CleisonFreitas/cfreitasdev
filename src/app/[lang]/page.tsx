@@ -2,6 +2,7 @@ import Menu from "../components/menu";
 import { Dictionary, getDictionary } from "../../lib/dictionaries";
 import MiddleContent from "../components/middle-content";
 import FooterSection from "../components/footer-section";
+import { notFound } from "next/navigation";
 
 type Props = {
   params: Promise<{
@@ -9,12 +10,18 @@ type Props = {
   }>;
 };
 
+const supportedLanguages = ['en', 'pt_BR'];
+
 export default async function Home(props: Props) {
   const params = await props.params;
 
   const {
     lang
   } = params;
+
+  if (!supportedLanguages.includes(lang)) {
+    notFound();
+  }
 
   const t: Dictionary = await getDictionary(lang);
 
