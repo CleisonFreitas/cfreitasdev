@@ -4,15 +4,34 @@ import FooterSection from "@/app/components/footer-section";
 import Menu from "@/app/components/menu";
 import MiddleContent from "@/app/components/middle-content";
 import { LangType } from "@/app/types/lang_type";
+import TopbarBehavior from "./personal/topbar-behavior";
 
 const App = ({ t }: LangType) => {
 
     return (
-        <div className="grid grid-cols-[calc(100dvw-10px)] md:grid-cols-[calc(100dvw-20px)] lg:grid-cols-[1040px] xl:grid-cols-[1200px] justify-center grid-rows-[80px_1fr] md:grid-rows-[180px_1fr] bg-gray-950 overflow-y-auto">
-            <Menu t={t} />
-            <MiddleContent t={t} />
-            <FooterSection t={t} />
-        </div>
+        <>
+            {/* Fixed Topbar */}
+            <TopbarBehavior>
+                <div className="w-full bg-gray-950 flex justify-center">
+                    <div className="w-full max-w-[1200px] px-2 md:px-4">
+                        <Menu t={t} />
+                    </div>
+                </div>
+            </TopbarBehavior>
+
+            {/* Main Content */}
+            <div className="grid grid-cols-[calc(100dvw-10px)] md:grid-cols-[calc(100dvw-20px)] lg:grid-cols-[1040px] xl:grid-cols-[1200px] justify-center bg-gray-950 overflow-y-auto pt-[80px] md:pt-[180px] gap-y-8">
+                <div>
+                    <MiddleContent t={t} />
+                </div>
+                <div>
+                    <FooterSection t={t} />
+                </div>
+            </div>
+        </>
+
+
+
     )
 }
 
