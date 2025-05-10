@@ -27,7 +27,7 @@ const LangSwitcher = () => {
                 <button
                     key={index}
                     onClick={() => changeLanguage(lang.domain)}
-                    className={`uppercase cursor-pointer px-3 py-1 rounded transition-all text-white duration-200 ${currentLang === lang.domain
+                    className={`uppercase cursor-pointer px-3 py-1 rounded transition-all duration-500 ease-in-out text-white ${currentLang === lang.domain
                         ? "bg-orange-500 font-semibold"
                         : "hover:bg-neutral-700 hover:scale-105 border border-gray-300"}
                     `}
