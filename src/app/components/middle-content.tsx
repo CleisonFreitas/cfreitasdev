@@ -25,7 +25,6 @@ const MiddleContent = ({ t }: { t: Record<string, string> }) => {
                         {section.component}
                     </div>
                 </FadeInSection>
-
             ))};
         </section>
     );
