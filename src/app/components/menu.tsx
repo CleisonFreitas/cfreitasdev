@@ -1,8 +1,8 @@
 'use client';
-import { Button } from "@/components/ui/button";
 import { renderMenuItems } from "../data/menu_data";
 import Logo from "@/components/personal/logo";
 import TopNavigateMenu from "@/components/personal/top-navigate-menu";
+import LangSwitcher from "@/components/personal/lang-switcher";
 
 const Menu = ({
     t,
@@ -25,9 +25,7 @@ const Menu = ({
 
             {/* Right side: Button */}
             <div className="col-start-2 col-end-3 lg:col-start-3 lg:col-end-4 flex justify-end">
-                <Button className="capitalize bg-orange-500 cursor-pointer hover:text-orange-300">
-                    {t["buttons.hire"]}
-                </Button>
+                <LangSwitcher />
             </div>
         </div>
 

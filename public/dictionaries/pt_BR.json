@@ -5,8 +5,6 @@
   "menus.portfolio": "portfólio",
   "menus.contact": "contato",
 
-  "buttons.hire": "parceiria",
-
   "introduction.hi": "olá, eu me chamo",
   "introduction.file": "baixar CV",
   "introduction.experiences": "experiências",
@@ -38,7 +36,7 @@
   "portfolio.option.all": "todos",
   "portfolio.option.gallery": "galeria",
   "portfolio.option.web": "aplicativos web",
-  "portfolio.option.mobile": "aplicativos mobile",
+  "portfolio.option.mobile": "mobiles",
 
   "contact.section": "Sintá-se livre para entrar em contato",
 
