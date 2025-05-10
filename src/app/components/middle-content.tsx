@@ -1,5 +1,6 @@
 'use client';
 
+import FadeInSection from "@/components/personal/fade-in-section";
 import About from "./about";
 import Contact from "./contact";
 import Introduction from "./introduction";
@@ -17,12 +18,13 @@ const MiddleContent = ({ t }: { t: Record<string, string> }) => {
     return (
         <section className="row-start-2 row-end-2 col-start-1 col-end-1 flex flex-col gap-8 w-full">
             {sections.map((section, index) => (
-                <div
-                    key={index}
-                    id={section.path}
-                    className="scroll-mt-20">
-                    {section.component}
-                </div>
+                <FadeInSection key={index}>
+                    <div
+                        id={section.path}
+                        className="scroll-mt-20">
+                        {section.component}
+                    </div>
+                </FadeInSection>
             ))};
         </section>
     );
