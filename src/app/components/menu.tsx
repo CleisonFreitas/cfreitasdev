@@ -11,7 +11,7 @@ const Menu = ({
 }) => {
 
     return (
-        <div className="row-start-1 row-end-1 col-start-1 col-end-1 grid grid-cols-[1fr_1fr] lg:grid-cols-[50px_1fr_1fr] w-full h-[80px] items-center px-4">
+        <div className="row-start-1 row-end-2 col-start-1 col-end-2 grid grid-cols-[1fr_1fr] lg:grid-cols-[auto_1fr_auto] w-full h-[80px] items-center lg:px-0 px-2">
             {/* Left side: Logo and TopNavigateMenu */}
             <div className="col-start-1 col-end-2 flex justify-start items-center gap-1">
                 <TopNavigateMenu t={t} />
