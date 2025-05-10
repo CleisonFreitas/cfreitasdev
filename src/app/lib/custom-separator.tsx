@@ -11,8 +11,8 @@ const CustomSeparator = ({ items }: CustomSeparatorsType) => {
                     return (
                         <div key={key} className={`flex items-start justify-between pr-4 ${!isLast ? 'pl-2 border-r border-white' : ''}  py-1`}>
                             <div className="flex flex-col gap-4 justify-between items-start">
-                                <p className="text-orange-400 text-xl font-bold">{item.amount}+</p>
-                                <p className="text-white text-md capitalize">{item.description}</p>
+                                <p className="text-orange-400 text-sm md:text-xl font-bold">{item.amount}+</p>
+                                <p className="text-white text-sm md:text-md capitalize">{item.description}</p>
                             </div>
                         </div>
                     );
