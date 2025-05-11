@@ -1,13 +1,10 @@
-'use client';
-
-import { FaWhatsapp } from "react-icons/fa";
 import { LangType } from "../types/lang_type";
-import { Button } from "@/components/ui/button";
-import { MdOutlineDownload } from "react-icons/md";
 import CustomSeparator from "../lib/custom-separator";
 import { CustomSeparatorType } from "../types/custom-separator-type";
 import CustomPortrait from "../lib/custom-portrait";
 import { renderSocialMediaItems } from "../data/social-media_data";
+import DownloadResumeButton from "@/components/personal/download-resume-button";
+import WhatsappButton from "@/components/personal/whatsapp-button";
 
 const Introduction = ({ t }: LangType) => {
     const items: CustomSeparatorType[] = [
@@ -35,14 +32,8 @@ const Introduction = ({ t }: LangType) => {
                 {renderSocialMediaItems()}
                 <span className="hidden md:block h-[61px]" />
                 <div className="flex justify-between gap-4 mb-0 md:mb-[80px]">
-                    <Button className="flex justify-center gap-2 bg-orange-500 text-white border-2 border-orange-400 py-4 px-16">
-                        <FaWhatsapp size={20} />
-                        <p className="capitalize text-md">whatsApp</p>
-                    </Button>
-                    <Button className="flex justify-center gap-2 bg-transparent text-white border-2 border-white py-4 px-16">
-                        <MdOutlineDownload size={20} />
-                        <p className="capitalize">{t["introduction.file"]}</p>
-                    </Button>
+                    <WhatsappButton>{t['introduction.hire']}</WhatsappButton>
+                    <DownloadResumeButton>{t["introduction.file"]}</DownloadResumeButton>
                 </div>
                 <CustomSeparator items={items} />
             </div>
