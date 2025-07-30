@@ -1,5 +1,3 @@
-'use client';
-
 import {
     Form,
     FormControl,
@@ -18,6 +16,9 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { serviceItems } from "../data/service_data";
 import { Button } from "@/components/ui/button";
 import { LangType } from "../types/lang_type";
+import { FormEvent, useState } from "react";
+import Loading from "@/components/ui/loading";
+import emailjs from '@emailjs/browser';
 
 const formSchema = z.object({
     fullname: z.string().min(3, { message: "Full name must be at least 10 characters." }),
@@ -40,6 +41,8 @@ type FieldType = {
 };
 
 const Contact = ({ t }: LangType) => {
+    const [loading, setLoading] = useState(false);
+
     const form = useForm<FormData>({
         resolver: zodResolver(formSchema),
         defaultValues: {
@@ -85,15 +88,70 @@ const Contact = ({ t }: LangType) => {
         }
     ]
 
-    const onSubmit = (values: FormData) => {
-        console.log("🚀 Submitted:", values)
-    }
+    const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+        setLoading(true);
+
+        const form = e.currentTarget;
+        const formData = new FormData(form);
+
+        emailjs
+            .sendForm(
+                process.env.EMAILJS_SERVICE_ID as string,
+                process.env.EMAILJS_TEMPLATE_ID as string, form.current, {
+                publicKey: process.env.EMAILJS_PUBLIC_KEY as string,
+            })
+            .then(
+                () => {
+                    console.log('SUCCESS!');
+                },
+                (error) => {
+                    console.log('FAILED...', error.text);
+                },
+            );
+
+        const data = {
+            fullname: formData.get("fullname") as string,
+            email: formData.get("email") as string,
+            phone: formData.get("phone") as string,
+            interest: formData.get("interest") as string,
+            details: formData.get("details") as string,
+        };
+        console.log(data);
+        const result = formSchema.safeParse(data);
+        if (!result.success) {
+            console.error(result.error.format());
+            alert("Please fill in all required fields correctly.");
+            setLoading(false);
+            return;
+        }
+        try {
+            await emailjs.sendForm(
+                process.env.EMAILJS_SERVICE_ID!,
+                process.env.EMAILJS_TEMPLATE_ID!,
+                form,
+                {
+                    publicKey: process.env.EMAILJS_PUBLIC_KEY!,
+                }
+            );
+
+            alert("✅ Email sent successfully!");
+            form.reset();
+        } catch (error) {
+            console.error("EmailJS Error:", error);
+            alert("❌ Failed to send email.");
+        } finally {
+            setLoading(false);
+        }
+    };
+
+
     return (
         <section className="flex justify-center w-full px-1 md:px-0 flex-col items-center gap-4 md:mt-[90px]">
             <CustomTitle title={t['menus.contact']} subtitle={t['contact.section']} />
             <Form {...form}>
                 <form
-                    onSubmit={form.handleSubmit(onSubmit)}
+                    onSubmit={handleSubmit}
                     className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full"
                 >
                     {fields.map((item, index) => {
@@ -180,7 +238,7 @@ const Contact = ({ t }: LangType) => {
                             className="capitalize mt-3 mb-4 bg-gray-950 text-white border-2 border-white py-5 w-full md:w-[225px]"
                             type="submit"
                         >
-                            {t['contact.form.button']}
+                            {loading ? <Loading /> : t['contact.form.button']}
                         </Button>
                     </div>
                 </form>
