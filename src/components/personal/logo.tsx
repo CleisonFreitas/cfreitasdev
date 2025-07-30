@@ -11,6 +11,7 @@ const Logo = () => {
                 src={'/assets/images/logo.png'}
                 alt="logo" width={isMobile ? 62 : 82}
                 height={15}
+                priority
                 className="w-auto h-auto"
             />
             <h1 className="text-orange-400 text-[24px] hidden md:block">Cleison Freitas</h1>
