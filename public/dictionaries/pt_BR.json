@@ -56,5 +56,7 @@
   "contact.form.details": "detalhes",
   "contact.form.details.placeholder": "Me informe mais detalhes",
 
-  "contact.form.button": "enviar"
+  "contact.form.button": "enviar",
+
+  "profile.github": "Abrir detalhes"
 }

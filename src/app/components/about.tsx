@@ -3,8 +3,9 @@
 import { Button } from "@/components/ui/button";
 import CustomPortrait from "../lib/custom-portrait";
 import CustomTitle from "../lib/custom-title";
-import { FaCloudDownloadAlt } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
 import { LangType } from "../types/lang_type";
+import Link from "next/link";
 
 const About = ({ t }: LangType) => {
     return (
@@ -19,10 +20,13 @@ const About = ({ t }: LangType) => {
                     >
                         {t['about.description']}
                     </p>
-                    <Button className="bg-orange-500 text-white flex items-center gap-4 md:mt-2 cursor-pointer hover:text-orange-300 text-xl w-[300px] py-5">
-                        <FaCloudDownloadAlt />
-                        <p className="capitalize">{t['introduction.file']}</p>
-                    </Button>
+                    <Link href={'https://github.com/CleisonFreitas'} target="_blank" >
+                        <Button className="bg-orange-500 text-white flex items-center gap-4 md:mt-2 cursor-pointer hover:text-orange-300 text-xl w-[300px] py-5">
+                            <FaGithub />
+
+                            <p className="capitalize">{t['profile.github']}</p>
+                        </Button>
+                    </Link>
                 </span>
             </div>
         </section>
