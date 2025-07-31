@@ -29,7 +29,7 @@ export const portfolioCardsData: portfolioCardType[] = [
         "image.alt": "Delivery page",
         "name": "Delivery landing page",
         "category": "gallery",
-        "github": "https://github.com/CleisonFreitas/local-service-flutter",
+        "github": "https://github.com/CleisonFreitas/delivery-premium",
         "link": "https://delivery-premium.vercel.app/"
     },
     {
@@ -37,7 +37,7 @@ export const portfolioCardsData: portfolioCardType[] = [
         "image.alt": "Car models",
         "name": "Car models",
         "category": "gallery",
-        "github": "https://github.com/CleisonFreitas/local-service-flutter",
+        "github": "https://github.com/CleisonFreitas/car_models",
         "link": "https://car-models-one.vercel.app/"
     },
     {
@@ -45,7 +45,7 @@ export const portfolioCardsData: portfolioCardType[] = [
         "image.alt": "Sales Expert",
         "name": "Sales Expert",
         "category": "web",
-        "github": "https://github.com/CleisonFreitas/local-service-flutter",
+        "github": "https://github.com/CleisonFreitas/Sales-Expert",
         "link": ""
     },
     {
