@@ -49,7 +49,7 @@ export const portfolioCardsData: portfolioCardType[] = [
         "link": ""
     },
     {
-        "image.src": "/assets/images/sales-expert.png",
+        "image.src": "/assets/images/npi.png",
         "image.alt": "Npi",
         "name": "Npi Academy",
         "category": "web",
