@@ -6,6 +6,10 @@ import { RiNextjsFill, RiReactjsLine, RiTailwindCssFill } from "react-icons/ri";
 import { FaFlutter } from "react-icons/fa6";
 import { BiLogoPostgresql, BiLogoTypescript, BiLogoVuejs } from "react-icons/bi";
 import CustomSkillCard, { CustomSkillCardType } from "../lib/custom-skill-card";
+import { FaAws } from "react-icons/fa";
+import { IoLogoFirebase } from "react-icons/io5";
+import { GrOracle } from "react-icons/gr";
+import { DiMongodb } from "react-icons/di";
 
 const SkillSection = () => {
     const stack: CustomSkillCardType[] = [
@@ -48,6 +52,22 @@ const SkillSection = () => {
         {
             title: 'MySQL',
             icon: <TbBrandMysql size={74} />
+        },
+        {
+            title: 'MongoDB',
+            icon: <DiMongodb size={74} />
+        },
+        {
+            title: 'AWS',
+            icon: <FaAws size={74} />
+        },
+        {
+            title: 'Oracle',
+            icon: <GrOracle size={74} />
+        },
+        {
+            title: 'Firebase',
+            icon: <IoLogoFirebase size={74} />
         }
     ];
     return (

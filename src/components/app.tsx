@@ -12,8 +12,8 @@ const App = ({ t }: LangType) => {
         <>
             {/* Fixed Topbar */}
             <TopbarBehavior>
-                <div className="w-full bg-gray-950 flex justify-center">
-                    <div className="w-full max-w-[1200px] px-2 md:px-4">
+                <div className="w-full bg-gray-950 flex justify-center items-center py-4">
+                    <div className="w-full grid grid-cols-[calc(100dvw-20px)] md:grid-cols-[calc(100dvw-20px)] lg:grid-cols-[1000px] xl:grid-cols-[1200px] justify-center mb-4">
                         <Menu t={t} />
                     </div>
                 </div>

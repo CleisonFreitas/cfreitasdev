@@ -17,11 +17,11 @@ const TopNavigateMenu = ({ t }: LangType) => {
         <div className="grid grid-cols-1 justify-center items-center">
             <Sheet>
                 <SheetTrigger asChild>
-                    <RiMenu2Line size={24} className="lg:hidden cursor-pointer text-orange-300" />
+                    <RiMenu2Line size={24} className="xl:hidden cursor-pointer text-orange-300" />
                 </SheetTrigger>
                 <SheetContent side="top" className="border-none shadow-sm shadow-gray-900 bg-gray-950 py-3 text-gray-400 hover:text-orange-400" >
-                    <SheetHeader className="border-none shadow-md shadow-orange-200 text-orange-50">
-                        <SheetTitle className="text-orange-200 text-center">Menu</SheetTitle>
+                    <SheetHeader className="border-none shadow-sm shadow-background text-background">
+                        <SheetTitle className="text-background text-center">Menu</SheetTitle>
                         <SheetDescription hidden />
                     </SheetHeader>
                     {renderMenuItems({ isVertical: true, t })}

@@ -22,7 +22,7 @@ const Introduction = ({ t }: LangType) => {
         }
     ];
     return (
-        <section className="flex flex-col justify-between items-center h-full md:flex-row">
+        <section className="flex flex-col justify-between items-center h-full md:flex-row lg:px-4 xl:px-0">
             <div className="flex flex-col justify-between items-center gap-10 md:gap-0 md:items-start px-0 md:px-4 w-full">
                 <div className="flex flex-col gap-1 justify-center items-center md:items-start md:mb-[20px]">
                     <h3 className="text-white opacity-50 first-letter:capitalize text-[24px]">{t['introduction.hi']}</h3>
