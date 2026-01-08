@@ -135,11 +135,11 @@ const Contact = ({ t }: LangType) => {
                 }
             );
 
-            alert("✅ Email sent successfully!");
+            alert("Email sent successfully!");
             form.reset();
         } catch (error) {
             console.error("EmailJS Error:", error);
-            alert("❌ Failed to send email.");
+            alert("Failed to send email.");
         } finally {
             setLoading(false);
         }

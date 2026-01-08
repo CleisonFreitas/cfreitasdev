@@ -1,4 +1,3 @@
-'use cliente';
 import { MailIcon, PhoneIcon } from "lucide-react";
 import { renderMenuItems } from "../data/menu_data";
 import { renderSocialMediaItems } from "../data/social-media_data";

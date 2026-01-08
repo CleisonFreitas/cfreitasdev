@@ -58,5 +58,17 @@
 
   "contact.form.button": "send",
 
-  "profile.github": "Check for more details"
+  "profile.github": "Check for more details",
+
+  "about.title": "My software developer journey",
+  "about.subtitle": "How my responsibilities and technical mindset evolved over time.",
+
+  "about.enterprise.title": "Enterprise systems & APIs",
+  "about.enterprise.description": "Worked on internal systems, complex business rules, and API-driven integrations that support real-world operations.",
+
+  "about.scalability.title": "Scalability & architecture",
+  "about.scalability.description": "Focused on refactoring legacy systems, applying SOLID principles, DDD concepts, and improving performance and maintainability.",
+
+  "about.cloud.title": "Cloud & ownership",
+  "about.cloud.description": "Designed and maintained cloud-based solutions, taking ownership of critical services and CI/CD pipelines."
 }

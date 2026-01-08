@@ -58,5 +58,17 @@
 
   "contact.form.button": "enviar",
 
-  "profile.github": "Abrir detalhes"
+  "profile.github": "Abrir detalhes",
+
+  "about.title": "Minha evolução como desenvolvedor de software",
+  "about.subtitle": "Como minhas responsabilidades e minha mentalidade técnica evoluíram ao longo do tempo.",
+
+  "about.enterprise.title": "Sistemas corporativos & APIs",
+  "about.enterprise.description": "Atuei em sistemas internos, regras de negócio complexas e integrações baseadas em APIs que sustentam operações reais.",
+
+  "about.scalability.title": "Escalabilidade & Arquitetura",
+  "about.scalability.description": "Foco em refatoração de sistemas legados, aplicação de princípios SOLID, conceitos de DDD e melhorias de performance e manutenibilidade.",
+
+  "about.cloud.title": "Cloud & Ownership",
+  "about.cloud.description": "Desenvolvimento e manutenção de soluções em nuvem, assumindo responsabilidade por serviços críticos e pipelines de CI/CD."
 }
