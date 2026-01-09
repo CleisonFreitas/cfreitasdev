@@ -72,7 +72,7 @@ const SkillSection = () => {
     ];
     return (
         <section
-            className="flex flex-col justify-between items-center w-full h-auto md:mt-[150px]">
+            className="flex flex-col justify-between items-center w-full h-auto mt-[90px]">
             <CustomTitle title="Stack" />
             <div className="grid grid-cols-[repeat(auto-fit,_minmax(140px,_1fr))] gap-4 px-4 w-full">
                 {stack.map((item, index) => (

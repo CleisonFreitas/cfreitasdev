@@ -6,7 +6,6 @@ export const menuItems = [
     { id: uuid(), title: 'menus.service', url: '#service' },
     { id: uuid(), title: 'menus.about', url: '#about' },
     { id: uuid(), title: 'menus.portfolio', url: '#portfolio' },
-    { id: uuid(), title: 'menus.contact', url: '#contact' },
 ];
 
 export const renderMenuItems = (

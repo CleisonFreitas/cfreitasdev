@@ -19,9 +19,12 @@ const About = ({ t }: LangType) => {
     ];
 
     return (
-        <section className="mt-8 md:mt-[90px]">
-            <div className="mx-auto max-w-5xl px-4">
-                <CustomTitle title={t['about.title']} subtitle={t['about.subtitle']} />
+        <section className="mt-8 md:mt-[90px] flex flex-col flex-center items-center w-full">
+            <div className="mx-auto max-w-5xl px-4 flex flex-col justify-items-center w-full text-center">
+                <CustomTitle
+                    title={t['about.title']}
+                    subtitle={t['about.subtitle']}
+                />
 
                 <div className="mt-8 relative space-y-10 border-l border-zinc-800 pl-8">
                     {journey.map((item, index) => (
